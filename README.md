@@ -10,10 +10,13 @@ To run
 
 where X is one of the following
 
+- simple-io
 - basic-plot
-- least-square
+- least-squares
 - serve
 - jsonrequest
+- your-goddamn-loops
+
 
 
 The interesting files from stack's perspective are package.yaml. This is where the libraries used for the above tasks are listed.

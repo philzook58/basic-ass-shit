@@ -1,0 +1,98 @@
+name:                basic-ass-shit
+version:             0.1.0.0
+github:              "githubuser/basic-ass-shit"
+license:             BSD3
+author:              "Author name here"
+maintainer:          "example@example.com"
+copyright:           "2019 Author name here"
+
+extra-source-files:
+- README.md
+- ChangeLog.md
+
+# Metadata used when publishing your package
+# synopsis:            Short description of your package
+# category:            Web
+
+# To avoid duplicated efforts in documentation and dealing with the
+# complications of embedding Haddock markup inside cabal files, it is
+# common to point users to the README.md file.
+description:         Please see the README on GitHub at <https://github.com/githubuser/basic-ass-shit#readme>
+
+dependencies:
+- base >= 4.7 && < 5
+- wreq
+- aeson
+- lens
+- hip
+- Chart-cairo
+- Chart
+- scotty
+- hmatrix
+
+library:
+  source-dirs: src
+
+executables:
+  basic-plot:
+    main:                Plot.hs
+    source-dirs:         app
+    ghc-options:
+    - -threaded
+    - -rtsopts
+    - -with-rtsopts=-N
+    - -main-is Plot
+    dependencies:
+    - basic-ass-shit
+    - hip
+    - Chart-cairo
+
+  json-request:
+    main:                JsonRequest.hs
+    source-dirs:         app
+    ghc-options:
+    - -threaded
+    - -rtsopts
+    - -with-rtsopts=-N
+    - -main-is JsonRequest
+    dependencies:
+    - basic-ass-shit
+    - wreq
+    - aeson
+    - lens
+
+  serve:
+    main:                Serve.hs
+    source-dirs:         app
+    ghc-options:
+    - -threaded
+    - -rtsopts
+    - -with-rtsopts=-N
+    - -main-is Serve
+    dependencies:
+    - basic-ass-shit
+    - scotty
+
+  least-squares:
+    main:                LeastSquares.hs
+    source-dirs:         app
+    ghc-options:
+    - -threaded
+    - -rtsopts
+    - -with-rtsopts=-N
+    - -main-is LeastSquares
+    dependencies:
+    - basic-ass-shit
+    - hmatrix
+    extra-libraries: iconv
+
+tests:
+  basic-ass-shit-test:
+    main:                Spec.hs
+    source-dirs:         test
+    ghc-options:
+    - -threaded
+    - -rtsopts
+    - -with-rtsopts=-N
+    dependencies:
+    - basic-ass-shit

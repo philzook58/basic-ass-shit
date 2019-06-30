@@ -17,6 +17,6 @@ where X is one of the following
 
 
 The interesting files from stack's perspective are package.yaml. This is where the libraries used for the above tasks are listed.
-The source files are in src. Ain't much there.
+The source files are in /app. Ain't much there.
 
 
